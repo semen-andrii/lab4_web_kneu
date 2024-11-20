@@ -1,0 +1,182 @@
+<html>
+	<head>
+   		<meta charset="UTF-8">
+   		<title> Website </title>
+
+   	 	<link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+   	 	<b>Замовлення піци</b>
+
+   		<form id="userForm" name="userForm">
+   		<fieldset>
+   			<label>Ваше ім'я:
+					<input
+					type="text"
+					id="nameUser"
+					name="nameUser"
+					required
+   			  pattern="\w{1,15}"
+					title="Ім'я має займати максимум 15 літер"
+   			  placeholder="Введіть сюди.."/>
+				</label>
+   		</fieldset>
+
+   		<fieldset>
+   			 <label for="address">Оберіть піцерію: </label>
+
+   			 <select id="address" name="address">
+
+   				 <option value="Бульвар Вацлава Гавела, 49" selected>
+						 Бульвар Вацлава Гавела, 49
+					 </option>
+
+   				 <option value="Вулиця Мрії, 28">
+						 Вулиця Мрії, 28
+					 </option>
+
+   				 <option value="Проспект Павла Тичини, 1В">
+						 Проспект Павла Тичини, 1В
+					 </option>
+   			 </select>
+
+   		 </fieldset>
+
+   		 <fieldset>
+   			 <label>Спосіб отримання:</label>
+
+   			 <label>Доставка
+					 <input type="radio"
+					 name="receiving"
+					 value="Доставка"
+					 id="delivery"
+					 required/>
+				 </label>
+
+   			 <label>Забрати самостійно
+					 <input
+					 type="radio"
+					 name="receiving"
+					 value="Отримання на місці"
+					 id="getting"/>
+				 </label>
+   		 </fieldset>
+
+   		 <fieldset>
+   			 <label>Оберіть піцу</label>
+
+   			 <hr>
+   			 <div id="pizza">
+   				 <label>Пепероні
+						 <input
+						 type="radio"
+						 name="pizza"
+						 value="Пепероні"
+						 id="peperoni"
+						 required/>
+					 </label>
+
+   				 <label>М'ясна
+						 <input
+						 type="radio"
+						 name="pizza"
+						 value="М'ясна"
+						 id="meat"/>
+					 </label>
+
+   				 <label>Гавайська
+						 <input
+						 type="radio"
+						 name="pizza"
+						 value="Гавайська"
+						 id="hawaii"/>
+					 </label>
+
+   				 <label>Маргарита
+						 <input
+						 type="radio"
+						 name="pizza"
+						 value="Маргарита"
+						 id="margarita"/>
+					 </label>
+   			 </div>
+
+   			 <div id="pizza">
+   				 <img src="https://dr.smaki-maki.com/wp-content/uploads/sites/13/2023/08/peperoni.jpg">
+   				 <img src="https://ecopizza.com.ua/548-large_default/pica-4-m-yasa.jpg">
+   				 <img src="https://smaki-maki.com/wp-content/uploads/sites/4/2020/05/gavajska-2.jpg">
+   				 <img src="https://grigliata.com.ua/wp-content/uploads/2023/04/Margarita.jpg">
+   			 </div>
+   		 </fieldset>
+
+   		 <fieldset>
+   			 <label>Додаткові інгредієнти та соуси:</label>
+
+   			 <hr>
+   			 <div id="ingredients">
+   				 <div>
+   					 <input
+						 type="checkbox"
+						 value="Томатний соус"
+						 id="tomato-sauce"
+						 name="extra">
+   					 <label>Томатний соус</label>
+   				 </div>
+
+   				 <div>
+   					 <input
+						 type="checkbox"
+						 value="Додатково сир"
+						 id="add-chesse"
+						 name="extra">
+   					 <label>Додати сир</label>
+   				 </div>
+
+   				 <div>
+   					 <input
+						 type="checkbox"
+						 value="Соус Барбекю"
+						 id="barbecue-sauce"
+						 name="extra">
+   					 <label>(Окремо) Соус Барбекю</label>
+   				 </div>
+
+   				 <div>
+   					 <input
+						 type="checkbox"
+						 value="Додатково ковбаси"
+						 id="add-sausage"
+						 name="extra">
+   					 <label>Додати ковбаси</label>
+   				 </div>
+   			 </div>
+   		 </fieldset>
+
+   		 <fieldset>
+   			 <label>Додаткові інструкції:</label><br>
+
+   			 <textarea id="instructions" name="instructions"></textarea><br>
+
+   			 <input
+				 type="submit"
+				 id="submit"
+				 value="Надіслати"
+				 autofocus="autofocus"/>
+
+   		 </fieldset>
+   	 </form>
+
+     <table id="orders" border="1">
+       	<tr>
+        	<th>Назва</th>
+         	<th>Тип</th>
+         	<th>Спосіб доставки</th>
+         	<th>Інгрідієнти</th>
+         	<th>Додатково</th>
+        </tr>
+			</table>
+    </body>
+
+<script src="script.js"> </script>
+</html>
